@@ -6,7 +6,7 @@
 
 ---
 
-![Dashboard de Sinistros](image_f6f55a.png)
+![Screenshot do Dashboard de Sinistros](https://github.com/BrenoFernandes-pdf/dashboard-sinistros/blob/master/image.png?raw=true)
 
 ## 🚀 Sobre o Projeto
 
