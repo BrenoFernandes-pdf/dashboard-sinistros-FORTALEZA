@@ -1,0 +1,14 @@
+{
+  "name": "e5d23e325bd1298b",
+  "main": "e5d23e325bd1298b@1159.js",
+  "version": "1159.0.0",
+  "homepage": "https://observablehq.com/d/e5d23e325bd1298b",
+  "author": {
+    "name": "UFC - Data Visualization",
+    "url": "https://observablehq.com/@ufc-data-visualization2"
+  },
+  "type": "module",
+  "peerDependencies": {
+    "@observablehq/runtime": "4 - 5"
+  }
+}
