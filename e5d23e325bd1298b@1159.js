@@ -40,8 +40,7 @@ async function _mapa_de_teste(require,html,rua_ativa,top_rua_inicial,FileAttachm
     console.error("Não foi possível carregar o arquivo bairros.geojson. Verifique se ele está anexado.", e);
   }
 
-  // 6. Filtra os dados para pegar os sinistros de uma única via para o nosso teste
-   // --- ALTERAÇÃO PRINCIPAL AQUI ---
+  // 6. Filtra os dados para pegar os sinistros de uma única via para o teste
   // Em vez de um nome de rua fixo, usamos a variável reativa 'rua_ativa'
   const pontos_para_plotar = dados_preparados.filter(d => d.LOG1 === rua_ativa);
 
@@ -62,7 +61,6 @@ async function _mapa_de_teste(require,html,rua_ativa,top_rua_inicial,FileAttachm
     }
   }
   
-  // --- A CORREÇÃO ESTÁ AQUI ---
   // Esta linha diz ao Observable para executar o comando map.remove() 
   // (que destrói o mapa) sempre que a célula for invalidada/re-executada.
   invalidation.then(() => map.remove());
@@ -134,13 +132,12 @@ function _dashboard_completo(vl,data,dados_preparados)
       vl.tooltip(["LOG1", "Número de Sinistros"])
     );
 
-  // --- NOVO GRÁFICO: Ranking Completo com Rolagem ---
 
   const heatmap_spec = vl.markRect({tooltip: true})
     .data(dados_preparados)
     .width(800)
     .height(500)
-    .title("Heatmap de Ocorrências por Dia e Hora") // Título dinâmico!
+    .title("Heatmap de Ocorrências por Dia e Hora")
     .transform(
       vl.filter(selecao_rua_grafico),
       vl.filter("filtro_ano === 'TODOS' || datum.ANO === filtro_ano"),
