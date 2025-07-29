@@ -2,7 +2,7 @@
 
 **Autor:** Breno Fernandes
 **Disciplina:** Visualização de Dados 2025.1
-**Professora:** Profa. Dra. Emanuele Santos
+**Professora:** Dra. Emanuele Santos
 
 ---
 
